@@ -4,9 +4,9 @@ Final project for the course "Informatic Technologies for the Web" at Politecnic
 # Photos
 ## Pure HTML
 - Login screen
-![Login](photos/Pure%20HTML/login-html.png) /
+![Login](photos/Pure%20HTML/login-html.png) \
 - Home screen with all accounts and possibility to create account
-![Home](photos/Pure%20HTML/home-html.png) /
+![Home](photos/Pure%20HTML/home-html.png) \
 - Details page of a specific account with the possibility to make a bank transfer
 ![Account](photos/Pure%20HTML/account%20-%20HTML.png)  
 - Succesful transfer page
