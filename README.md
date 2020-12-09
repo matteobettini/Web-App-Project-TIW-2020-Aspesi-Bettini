@@ -6,23 +6,23 @@ Final project for the course "Informatic Technologies for the Web" at Politecnic
 - Login screen
 ![Login](photos/Pure%20HTML/login-html.png) <br/>
 - Home screen with all accounts and possibility to create account
-![Home](photos/Pure%20HTML/home-html.png)
+![Home](photos/Pure%20HTML/home-html.png) <br/>
 - Details page of a specific account with the possibility to make a bank transfer
-![Account](photos/Pure%20HTML/account%20-%20HTML.png)
+![Account](photos/Pure%20HTML/account%20-%20HTML.png) <br/>
 - Succesful transfer page
-![Confirmed](photos/Pure%20HTML/trasfer-confirmed-html.png)
+![Confirmed](photos/Pure%20HTML/trasfer-confirmed-html.png) <br/>
 - Failed transfer page
-![Failed](photos/Pure%20HTML/transfer-failed-html.png)
+![Failed](photos/Pure%20HTML/transfer-failed-html.png) <br/>
 
 ## One page RIA
 - Login screen
-![Login](photos/RIA/login%20-%20RIA%20.png)
+![Login](photos/RIA/login%20-%20RIA%20.png) <br/>
 - Home screen with all accounts and account details
-![Home](photos/RIA/home%20-%20RIA.png)
+![Home](photos/RIA/home%20-%20RIA.png) <br/>
 - The app suggests people from the address book as possible tranfer recipients
-![Account](photos/RIA/suggestions%20-%20RIA.png)
+![Account](photos/RIA/suggestions%20-%20RIA.png) <br/>
 - Succesful transfer with possibility to add recipient to address book
-![Confirmed](photos/RIA/success%20-%20RIA.png)
+![Confirmed](photos/RIA/success%20-%20RIA.png) <br/>
 - Failed transfer
-![Failed](/photos/RIA/failed%20-%20RIA.png)
+![Failed](/photos/RIA/failed%20-%20RIA.png) <br/>
 
