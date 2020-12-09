@@ -1,5 +1,5 @@
 # Web-App-Project-TIW-2020-Aspesi-Bettini
-Final project for the course "Informatic Technologies for the Web" at Politecnico di Milano. This project contains a web app in two versions: thin and thick client. It was developed in a team of two composed by me and Andrea Aspesi [@AspesiAndrea]. This project has been awarded the **maximum grade**.
+Final project for the course "Informatic Technologies for the Web" at Politecnico di Milano. This project contains a web app in two versions: thin and thick client. It was developed in a team of two composed by me and Andrea Aspesi ([@AspesiAndrea]). This project has been awarded the **maximum grade**.
 
 # Photos
 ## Pure HTML
