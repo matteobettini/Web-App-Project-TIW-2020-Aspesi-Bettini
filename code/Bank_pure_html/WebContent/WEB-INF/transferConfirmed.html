@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="../css/global.css" th:href="@{/css/global.css}"/>
+	<link rel="stylesheet" type="text/css" href="../css/transfer-confirmed.css" th:href="@{/css/transfer-confirmed.css}"/>
+	<title>Transfer Confirmed</title>
+</head>
+<body>
+	<div th:replace="/WEB-INF/header :: header"> </div>
+	
+	<div class="transfer-confirmed">
+		<img class="transfer-confirmed-image" src="../resources/transfer_okay.png" th:src="@{/resources/transfer_okay.png}"/>
+
+		<div class="transfer-confirmed-title"><span th:text="${transferInfoShown} ? 'Last transfer' : 'Transfer' ">Transfer</span> confirmed</div>
+		
+	
+		<div class="transfer-div">		
+			<div class="tranfer-source">
+				<div class="title">Source Account</div>
+				<div class="content">
+					Owner Code: <span th:text=${session.sourceAccount.userId}>3</span><br>
+					Account Code: <span th:text=${session.sourceAccount.id}>3</span><br>
+					Name: <span th:text=${session.sourceAccount.name}>conto esempio 1</span><br>
+					New Balance: <span th:text=${session.sourceAccount.balance}>34.56</span>&euro;
+				</div>
+			</div>
+			<div class="transfer">
+				<img class="transfer-image" src="../resources/transfer.png" th:src="@{/resources/transfer.png}"/>
+				<div class="title">Transfer</div>
+				<div class="content">
+					Amount: <span th:text=${session.transfer.amount}>34.56</span>&euro;<br>
+					Reason: <span th:text=${session.transfer.reason}>salary</span>
+				</div>
+			</div>
+			<div class="tranfer-destination">
+				<div class="title">Destination Account</div>
+				<div class="content">
+					Owner Code: <span th:text=${session.destAccount.userId}>4</span><br>
+					Account Code: <span th:text=${session.destAccount.id}>4</span><br>
+					Name: <span th:text=${session.destAccount.name}>conto esempio 2</span><br>
+					New Balance:  <span th:text=${session.destAccount.balance}>40.56</span>&euro;
+				</div>
+			</div>
+		</div>
+		<hr>
+		<a th:href="@{/GoToAccountStatus(accountId = ${session.sourceAccount.id})}">Return to Account</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="../css/global.css" th:href="@{/css/global.css}"/>
+	<link rel="stylesheet" type="text/css" href="../css/register.css" th:href="@{/css/register.css}"/>
+	<title>Register</title>
+</head>
+<body>
+	<div class="register-div purple-div">
+		<div class="register-title">Insert data to create a new Account!</div>
+		<form class="register-form" method="POST" th:action="@{/Register}">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" placeholder="Enter your name" name="name" required>
+			</div>
+			<div class="form-group">
+				<label for="name">Email</label>
+				<input type="email" placeholder="Enter your email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" placeholder="Enter your desired password" name="password" required><br>
+			</div>
+			<button class="btn btn-large btn-purple" type="submit">Register</button>
+		</form>
+		<div class="warning-message" th:if="${warning}">
+			<span th:text="${warning}">Data not valid!</span>
+		</div>
+		<hr>
+		<a class="register-link" th:href="@{/}">Go Back</a>
+	</div>
+</body>
+</html>

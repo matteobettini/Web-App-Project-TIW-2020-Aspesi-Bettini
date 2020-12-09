@@ -1,0 +1,50 @@
+body{
+    text-align: center;
+}
+.transfer-confirmed{
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-align: center;
+}
+.transfer-confirmed-image{
+    padding: 0;
+    max-height: 40vh;
+    border-color: #28a745;
+    background-color: #28a745;
+    border-radius: 20px;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);
+}
+.transfer-confirmed-title{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #28a745;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.transfer-div{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+.tranfer-source, .transfer, .tranfer-destination{
+    width: 33%;
+    text-align: center;
+}
+.transfer-image{
+    max-width: 150px;
+    max-height: 150px;
+}
+.title{
+    font-size: 25px;
+    font-weight: 600;
+}
+.content{
+    font-size: 20px;
+}
+span{
+    font-weight: 500;
+}

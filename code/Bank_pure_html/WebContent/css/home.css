@@ -1,0 +1,48 @@
+.home-title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.home-subtitle{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.home-div{
+    padding: 0 2rem 2rem 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+.create-div{
+    margin-top: 20px;
+    text-align: center;
+    max-width: 50%;
+}
+.create-title{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.home-form{
+    margin-bottom: 20px;
+}
+.account-div{
+    margin-top: 20px;
+}
+.account-title{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.even{
+    background-color: rgb(111, 66, 193, 0.05);
+}
+.no-accounts{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}

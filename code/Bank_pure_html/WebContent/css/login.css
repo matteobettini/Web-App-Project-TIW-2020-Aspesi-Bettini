@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+}
+.login-div{
+    max-width: 50%;
+}
+.login-form{
+    margin-bottom: 20px;
+}
+.login-title{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}

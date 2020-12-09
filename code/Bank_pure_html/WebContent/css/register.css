@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+}
+.register-div{
+    margin-top: 5%;
+    max-width: 50%;
+}
+.register-form{
+    margin-bottom: 20px;
+}
+.register-title{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}

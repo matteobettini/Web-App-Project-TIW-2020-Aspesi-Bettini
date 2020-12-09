@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="../css/global.css" th:href="@{/css/global.css}"/>
+	<link rel="stylesheet" type="text/css" href="../css/home.css" th:href="@{/css/home.css}" />
+	<title>Home</title>
+</head>
+<body>
+	<div th:replace="/WEB-INF/header :: header"> </div>
+	
+	<div class="home-title">Welcome to your home, <span th:text="${session.currentUser.name}">user</span></div>
+	<div class="home-subtitle">Nice to see you again!</div>
+	
+	<div class="home-div">
+		<div class="create-div purple-div">
+			<div class="create-title">Here you can create a new account</div>
+			<form class="home-form" method="POST" th:action="@{/CreateAccount}">
+				<div class="form-group">
+					<label for="accountName">Account Name</label>
+					<input type="text" placeholder="Enter the account name" name="accountName" required>
+				</div>
+				<button class="btn btn-large btn-purple" type="submit">Create account</button>
+			</form>
+			<div class="warning-message" th:if="${warning}">
+				<span th:text="${warning}">Warning message</span>
+			</div>
+		</div>
+
+		<div class="account-div purple-div">
+			<div class="account-title">Here there are your accounts</div>
+			<div th:switch="${accounts.size}">
+				<div th:case="0">
+					<div class="no-accounts">You currently have no accounts in our bank :(</div>
+				</div>
+				<div th:case="*" th:remove="all-but-first">
+					<div class="card card-blue" th:each="account : ${accounts}" th:classappend="${accountStat.even} ? 'even'">
+						<div class="card-title" th:text="${account.name}">Conto Casa</div>
+						<div class="card-data">
+							<div><b>Code: </b><span th:text="${account.id}">12333</span></div>
+							<div><b>Balance: </b><span th:text="${account.balance}">55.00</span>&euro;</div>
+						</div>
+						<a class="btn btn-purple btn-small btn-primary" th:href="@{/GoToAccountStatus(accountId=${account.id})}">Open</a>
+					</div>
+					<div class="card card-blue even">
+						<div class="card-title">Conto Vacanza</div>
+						<div class="card-data">
+							<div><b>Code: </b><span>22442</span></div>
+							<div><b>Balance: </b><span>100254.00</span>&euro;</div>
+						</div>		
+						<a class="btn btn-purple btn-small btn-primary">Open</a>
+					</div>
+					<div class="card card-blue">
+						<div class="card-title">Conto Macchina</div>
+						<div class="card-data">
+							<div><b>Code: </b><span>4434</span></div>
+							<div><b>Balance: </b><span>40000.00</span>&euro;</div>
+						</div>
+						<a class="btn btn-purple btn-small btn-primary">Open</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

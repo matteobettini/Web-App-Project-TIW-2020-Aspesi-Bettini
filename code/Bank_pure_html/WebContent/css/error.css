@@ -1,0 +1,30 @@
+.error-div{
+    max-width: 50%;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.error-title{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #e74a3b;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.error-reason{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.error-image{
+    padding: 0;
+    max-width: 85%;
+    max-height: 50%;
+    border-color: #e74a3b;
+    background-color: #e74a3b;
+    border-radius: 20px;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);
+}

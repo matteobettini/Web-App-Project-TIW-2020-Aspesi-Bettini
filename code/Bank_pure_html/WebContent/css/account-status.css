@@ -1,0 +1,77 @@
+.status-title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.status-subtitle{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.status-div{
+    padding: 0 2rem 2rem 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+.create-div{
+    margin-top: 20px;
+    text-align: center;
+    max-width: 50%;
+}
+.create-title{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.status-form{
+    margin-bottom: 20px;
+}
+.transfer-div{
+    margin-top: 20px;
+}
+.transfer-title{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.transfer-amount{
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+.positive{
+    color: #28a745;
+}
+.negative{
+    color: #dc3545;
+}
+.balance-div{
+    position: absolute; 
+    left: 1rem;
+    top: 1rem;
+	min-width: 100px;  
+	background-color: #fafafa; 
+    border: solid 2px #7952b3; 
+    border-radius: 20px;
+    text-align: center; 
+    padding: 0.5rem;
+    z-index: 100;
+}
+.balance-title{
+    color : #7952b3; 
+}
+.balance{
+    font-size: 20px;
+    font-weight: 600;
+}
+.no-transfers{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}

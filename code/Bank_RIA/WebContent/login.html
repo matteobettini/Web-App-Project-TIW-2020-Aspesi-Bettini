@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="css/global.css"/>
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<link rel="stylesheet" type="text/css" href="css/loading.css"/>
+	<script src="js/utils.js" charset="utf-8" defer></script>
+	<script src="js/loginManagement.js" charset="utf-8" defer></script>
+	<title>Login page</title>
+</head>
+<body>
+	<h1>Welcome to our bank!</h1>
+	
+	<div class="container">
+		<div class="login-div purple-div">
+			<div class="login-title">Insert your credentials to Login</div>
+			<form class="login-form" action="#">
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" placeholder="Enter your email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" placeholder="Enter your password" name="password" required>
+				</div>
+				<input id="login_button" class="btn btn-large btn-purple" type="button" value="Login" />
+			</form>
+			<div  id="login_warning_id" class="warning-message">Email or password not valid!</div>
+			<hr>
+			<a id="open_register_button" class="register-link" href="#">Register now!</a>
+		</div>
+		<div id="register-div" class="register-div purple-div">
+			<div class="register-title">Create a new Account</div>
+			<form class="register-form" action="#">
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" placeholder="Enter your name" name="name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" placeholder="Enter your email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" placeholder="Enter your desired password" name="password" required><br>
+				</div>
+				<div class="form-group">
+					<label for="passwordConfirm">Confirm Password</label>
+					<input type="password" placeholder="Confirm chosen password" name="passwordConfirm" required><br>
+				</div>
+				<input id="register_button" class="btn btn-large btn-purple" type="button" value="Register"/>
+			</form>
+			<div id="register_warning_id" class="warning-message">Data not valid!</div>
+		</div>
+	</div>
+	<div class="loading-div">
+		<img class="loading-img" src="resources/gear.gif" />
+		<div id="loading_msg" class="loading-message">Communicating with Server ...</div>
+	</div>
+</body>
+</html>

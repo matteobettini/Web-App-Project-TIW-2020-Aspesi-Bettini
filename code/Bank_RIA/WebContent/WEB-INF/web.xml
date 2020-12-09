@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Bank app RIA</display-name>
+  <context-param>
+    <param-name>dbUrl</param-name>
+    <param-value>jdbc:mysql://localhost:3306/bank?serverTimezone=Europe/Rome</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbUser</param-name>
+    <param-value>tiw_user</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbPassword</param-name>
+    <param-value>tiw_user</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbDriver</param-name>
+    <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  
+  
+  <filter>
+  	<filter-name>CheckLoggedUser</filter-name>
+  	<filter-class>filters.CheckLoggedUser</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>CheckNotLoggedUser</filter-name>
+  	<filter-class>filters.CheckNotLoggedUser</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>NoCacher</filter-name>
+  	<filter-class>filters.NoCacher</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>NoCacher</filter-name>
+    <url-pattern>/login.html</url-pattern>	
+    <url-pattern>/home.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>CheckNotLoggedUser</filter-name>
+    <url-pattern>/login.html</url-pattern>
+    <url-pattern>/Login</url-pattern>
+  	<url-pattern>/Register</url-pattern>	
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>CheckLoggedUser</filter-name>
+    <url-pattern>/home.html</url-pattern>
+  	<url-pattern>/GetAccounts</url-pattern>
+  	<url-pattern>/GetContacts</url-pattern>
+  	<url-pattern>/AddContact</url-pattern>
+  	<url-pattern>/CreateAccount</url-pattern>
+  	<url-pattern>/GetAccountDetails</url-pattern>
+  	<url-pattern>/MakeTransfer</url-pattern>	
+  </filter-mapping>
+
+
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+</web-app>

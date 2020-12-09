@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="../css/global.css" th:href="@{/css/global.css}"/>
+	<link rel="stylesheet" type="text/css" href="../css/account-status.css" th:href="@{/css/account-status.css}" />
+	<title>Account status</title>
+</head>
+<body>
+	<div th:replace="/WEB-INF/header :: header"> </div>
+	
+	<div class="status-title" th:text="${account.name}">Conto Casa</div>
+	<div class="status-subtitle">Account code: <span th:text="${account.id}">00000</span></div>
+	
+	<div class="balance-div">
+		<div class="balance-title" th:class="header-title">Your balance is</div>
+		<div class="balance"><span th:text="${account.balance}">200</span>&euro;</div>
+	</div>
+
+	<div class="status-div">
+		<div class="create-div purple-div">
+			<div class="create-title">Here you can create a new transfer</div>
+			<form class="status-form" method="POST" th:action="@{/MakeTransfer}">
+				<div class="form-group">
+					<label for="destUserId">Dest. User</label>
+					<input type="number" placeholder="Enter the code of the receiving user" name="destUserId" min=0 required><br>
+				</div>
+				<div class="form-group">
+					<label for="destAccountId">Dest. Account</label>
+					<input type="number" placeholder="Enter the code of the destination account" name="destAccountId" min=0 required><br>
+				</div>
+				<div class="form-group">
+					<label for="reason">Reason</label>
+					<input type="text" placeholder="Enter the reason" name="reason" required><br>
+				</div>
+				<div class="form-group">
+					<label for="amount">Amount</label>
+					<input type="number" step=0.01 placeholder="How much do you want to transfer" name="amount" min=0.01 required>
+				</div>
+				<input type="hidden" th:value="${account.id}" name="sourceAccountId">
+				<button class="btn btn-large btn-purple" type="submit">Make transfer</button>
+			</form>
+		</div>
+
+		<div class="transfer-div purple-div">
+			<div class="transfer-title">Here are your transfers</div>
+			<div th:switch="${transfers.size}">
+				<div th:case="0">
+					<div class="no-transfers">You currently have no transfers :(</div>
+				</div>
+				<div th:case="*" th:remove="all-but-first">
+					<div class="linked-card linked-card-blue" th:each="transfer : ${transfers}">
+						<div class="linked-card-title"><b><span th:text="(${transfer.sourceAccountID} == ${account.id}) ? 'Destination account: ' : 'Source account: '">Source account: </span></b><span th:text="(${transfer.sourceAccountID} == ${account.id}) ? ${transfer.destinationAccountID} : ${transfer.sourceAccountID}">00000</span></div>
+						<div class="linked-card-data">
+							<div><b>Timestamp: </b><span th:text="${transfer.timestamp}">23/04/2020 13:45</span></div>
+							<div><b>Reason: </b><span th:text="${transfer.reason}">Pagamento rata</span></div>
+							<div class="transfer-amount positive" th:class="(${transfer.sourceAccountID} == ${account.id}) ? 'transfer-amount negative' : 'transfer-amount positive'">
+								<span th:text="(${transfer.sourceAccountID} == ${account.id}) ? '-' : '+'">+</span><span th:text="${transfer.amount}">55.00</span>&euro;
+							</div>
+						</div>
+					</div>
+					<div class="linked-card linked-card-blue">
+						<div class="linked-card-title">54455</div>
+						<div class="linked-card-data">
+							<div><b>Timestamp: </b><span>28/04/2020 18:45</span></div>
+							<div><b>Reason: </b><span>Prestito</span></div>
+							<div class="transfer-amount positive"><span>+100.00</span>&euro;</div>
+						</div>
+					</div>
+					<div class="linked-card linked-card-blue">
+						<div class="linked-card-title">212222</div>
+						<div class="linked-card-data">
+							<div><b>Timestamp: </b><span>28/12/2020 22:45</span></div>
+							<div><b>Reason: </b><span>Pagamento gas</span></div>
+							<div class="transfer-amount negative"><span>-156.00</span>&euro;</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

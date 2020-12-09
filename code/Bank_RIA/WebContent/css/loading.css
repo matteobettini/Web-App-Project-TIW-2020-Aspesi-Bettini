@@ -1,0 +1,29 @@
+/*
+    Loading div
+*/
+
+body.loading .loading-div{
+    display: flex;
+    flex-direction: row;
+}
+.loading-div{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.75rem 1rem 0.75rem 0.5rem;
+    border-radius: 0 10px 0 0;
+    text-align: center;
+    z-index: 9999;
+}
+.loading-img{
+    max-height: 22px;
+}
+.loading-message{
+    color: #FFF;
+    font-size: 15px;
+    min-height: 15px;
+    font-weight: 600;
+    margin-left: 5px;
+}

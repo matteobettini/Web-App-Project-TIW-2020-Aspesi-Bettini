@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="../css/global.css" th:href="@{/css/global.css}" />
+	<link rel="stylesheet" type="text/css" href="../css/login.css" th:href="@{/css/login.css}"/>
+	<title>Login page</title>
+</head>
+<body>
+	<h1>Welcome to our bank!</h1>
+	
+	<div class="login-div purple-div">
+		<div class="login-title">Insert your credentials to Login</div>
+		<form class="login-form" method="POST" th:action="@{/Login}">
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" placeholder="Enter your email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" placeholder="Enter your password" name="password" required>
+			</div>
+			<button class="btn btn-large btn-purple" type="submit">Login</button>
+		</form>
+		<div class="warning-message" th:if="${warning}">
+			<span th:text="${warning}">Email or password not valid!</span>
+		</div>
+		<hr>
+		<a class="register-link" th:href="@{/GoToRegisterPage}">Register now!</a>
+	</div>
+</body>
+</html>
