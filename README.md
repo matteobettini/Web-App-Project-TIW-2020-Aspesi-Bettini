@@ -12,5 +12,17 @@ Final project for the course "Informatic Technologies for the Web" at Politecnic
 - Succesful transfer page
 ![Confirmed](photos/Pure%20HTML/trasfer-confirmed-html.png)
 - Failed transfer page
-![Failed](photos/Pure%20HTML/trasfer-failed-html.png)
+![Failed](photos/Pure%20HTML/transfer-failed-html.png)
+
+## One page RIA
+- Login screen
+![Login](photos/RIA/login%20-%20RIA%20.png)
+- Home screen with all accounts and account details
+![Home](photos/RIA/home%20-%20RIA.png)
+- The app suggests people from the address book as possible tranfer recipients
+![Account](photos/RIA/suggestions%20-%20RIA.png)
+- Succesful transfer with possibility to add recipient to address book
+![Confirmed](photos/RIA/success%20-%20RIA.png)
+- Failed transfer
+![Failed](/photos/RIA/failed%20-%20RIA.png)
 
