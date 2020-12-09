@@ -25,7 +25,7 @@ Final project for the course "Informatic Technologies for the Web" at Politecnic
 - Home screen with all accounts and account details
 ![Home](photos/RIA/home%20-%20RIA.png)  
 
-- The app suggests people from the address book as possible tranfer recipients
+- The app suggests people from the address book as possible transfer recipients
 ![Account](photos/RIA/suggestions%20-%20RIA.png)  
 
 - Succesful transfer with possibility to add recipient to address book
