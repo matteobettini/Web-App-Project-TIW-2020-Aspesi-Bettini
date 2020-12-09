@@ -3,6 +3,6 @@ Final project for the course "Informatic Technologies for the Web" at Politecnic
 
 # Photos
 ## Pure HTML
--Login screen
-![Login](photos/Pure\ HTML/login-html.png)
+- Login screen
+![Login](photos/Pure%20HTML/login-html.png)
 
